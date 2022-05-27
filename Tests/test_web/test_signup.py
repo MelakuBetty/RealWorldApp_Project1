@@ -1,7 +1,7 @@
 from Web.FrameWork.Base.base import Base
 from Web.FrameWork.Locators.SignupLocators import SignupLocators
 from Web.FrameWork.Utils.Test_utils import sign_up
-
+import allure
 from Web.FrameWork.Utils.Assert import *
 import pytest
 
@@ -10,6 +10,7 @@ import pytest
 class TestSignup(Base):
 
     @pytest.mark.sanity
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' valid signup credentials")
     def test_signup_success(self):
 
@@ -18,6 +19,7 @@ class TestSignup(Base):
         assertion(self, SignupLocators.signin_logo, SignupLocators.txt_logo)
 
     @pytest.mark.regression
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid first name credentials")
     def test_signup_firstName_Null(self):
 
@@ -27,6 +29,7 @@ class TestSignup(Base):
         assertion(self, SignupLocators.signin_logo, SignupLocators.txt_logo)
 
     @pytest.mark.regression
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid last name credentials")
     def test_signup_lastName_Null(self):
 
@@ -36,6 +39,7 @@ class TestSignup(Base):
         assertion(self, SignupLocators.signin_logo, SignupLocators.txt_logo)
 
     @pytest.mark.regression
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid user name credentials")
     def test_signup_userName_Null(self):
 
@@ -45,6 +49,7 @@ class TestSignup(Base):
 
 
     @pytest.mark.regression
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid signup credentials")
     def test_signup_password_Null(self):
 
@@ -54,6 +59,7 @@ class TestSignup(Base):
 
 
     @pytest.mark.regression
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid signup credentials")
     def test_signup_confirmpassword_Null(self):
 
@@ -62,6 +68,7 @@ class TestSignup(Base):
         assertion_buttons(self,SignupLocators.button_signup)
 
     @pytest.mark.sanity
+    @pytest.allure.severity(pytest.allure.severity_level.CRITICAL)
     @allure.description("Validates 'Real World App' invalid signup credentials")
     def test_signup_fields_Null(self):
 

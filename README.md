@@ -1,1 +1,2 @@
-# RealWorldApp_Project1
+# Real World App - Project
+by Betty Melaku
